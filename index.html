@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>The Grimoire</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Rock+Salt&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Rock+Salt&display=swap" rel="stylesheet" />
   <style>
     body {
       background-color: #f7f3e9;
@@ -50,6 +49,63 @@
   <h1>The Grimoire</h1>
   <input type="text" id="search" placeholder="Search spells...">
   <div id="grimoire-container"></div>
-  <script src="script.js"></script>
+
+  <script>
+    async function loadGrimoire() {
+      try {
+        const res = await fetch("grimoire.json");
+        const data = await res.json();
+        const container = document.getElementById("grimoire-container");
+        const categories = {};
+
+        data.forEach(entry => {
+          if (!categories[entry.category]) {
+            categories[entry.category] = [];
+          }
+          categories[entry.category].push(entry);
+        });
+
+        Object.entries(categories).forEach(([category, commands]) => {
+          const section = document.createElement("div");
+          section.className = "category-section";
+
+          const toggle = document.createElement("button");
+          toggle.className = "toggle-btn";
+          toggle.textContent = category;
+          toggle.addEventListener("click", () => {
+            list.classList.toggle("hidden");
+          });
+
+          const list = document.createElement("div");
+          list.className = "command-list";
+
+          commands.forEach(({ name, description }) => {
+            const div = document.createElement("div");
+            div.className = "command";
+            div.innerHTML = `<span class='command-name'>${name}:</span> ${description}`;
+            list.appendChild(div);
+          });
+
+          section.appendChild(toggle);
+          section.appendChild(list);
+          container.appendChild(section);
+        });
+
+        document.getElementById("search").addEventListener("input", function () {
+          const query = this.value.toLowerCase();
+          document.querySelectorAll(".command").forEach(cmd => {
+            const text = cmd.textContent.toLowerCase();
+            cmd.style.display = text.includes(query) ? "" : "none";
+          });
+        });
+
+      } catch (err) {
+        document.getElementById("grimoire-container").innerHTML = `<p style="color:red;">Error loading grimoire.json. Make sure it's uploaded and publicly accessible.</p>`;
+        console.error("Grimoire loading failed:", err);
+      }
+    }
+
+    loadGrimoire();
+  </script>
 </body>
 </html>
