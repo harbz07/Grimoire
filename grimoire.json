@@ -1,0 +1,82 @@
+[
+  {
+    "category": "Emotional Rawness & Truth",
+    "name": "compdoc(wet ink)",
+    "description": "Raw, heat-of-the-moment writing."
+  },
+  {
+    "category": "Emotional Rawness & Truth",
+    "name": "compdoc(confessional)",
+    "description": "Contradictory, emotional monologue form."
+  },
+  {
+    "category": "Emotional Rawness & Truth",
+    "name": "compdoc(exorcism)",
+    "description": "Violent poetic purge of emotions or people."
+  },
+  {
+    "category": "Symbolism & Ritual",
+    "name": "compdoc(spellbook)",
+    "description": "Symbolic spells/rituals with emotional payload."
+  },
+  {
+    "category": "Symbolism & Ritual",
+    "name": "compdoc(ritual log)",
+    "description": "Journal-style symbolic routines or patterns."
+  },
+  {
+    "category": "Symbolism & Ritual",
+    "name": "compdoc(votive)",
+    "description": "Miniature emotional prayers or offerings."
+  },
+  {
+    "category": "Symbolism & Ritual",
+    "name": "compdoc(altar piece)",
+    "description": "Visual triptych-style symbolic composition."
+  },
+  {
+    "category": "Symbolism & Ritual",
+    "name": "compdoc(skin script)",
+    "description": "Phrases as body tattoos or inscriptions."
+  },
+  {
+    "category": "Symbolism & Ritual",
+    "name": "compdoc(body map)",
+    "description": "Emotions or traumas mapped onto the body."
+  },
+  {
+    "category": "Surrealism & Mythmaking",
+    "name": "compdoc(fever dream)",
+    "description": "Sensory, nonlinear, surreal writing."
+  },
+  {
+    "category": "Surrealism & Mythmaking",
+    "name": "compdoc(mythos)",
+    "description": "Lore and myth creation."
+  },
+  {
+    "category": "Surrealism & Mythmaking",
+    "name": "compdoc(patron saint)",
+    "description": "Archetype canonization with miracles and lore."
+  },
+  {
+    "category": "Surrealism & Mythmaking",
+    "name": "compdoc(possession)",
+    "description": "Writing as if overtaken by a force."
+  },
+  {
+    "category": "Surrealism & Mythmaking",
+    "name": "compdoc(vault key)",
+    "description": "Unlocking sealed memories through poetic triggers."
+  },
+  {
+    "category": "Theory & Structure",
+    "name": "compdoc(autotheory)",
+    "description": "Memoir + cultural/philosophical theory."
+  },
+  {
+    "category": "Theory & Structure",
+    "name": "compdoc(oracle deck)",
+    "description": "Symbolic card systems with meanings."
+  }
+]

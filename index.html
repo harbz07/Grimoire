@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Grimoire</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Rock+Salt&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f7f3e9;
+      font-family: 'Caveat', cursive;
+      padding: 2rem;
+    }
+    h1, h2 {
+      font-family: 'Rock Salt', cursive;
+      color: #2e1f1c;
+    }
+    .command {
+      margin-bottom: 1rem;
+    }
+    .command-name {
+      font-weight: bold;
+      color: #3b2c28;
+    }
+    .category-section {
+      margin-top: 2rem;
+    }
+    .toggle-btn {
+      background: none;
+      border: none;
+      font-family: 'Rock Salt', cursive;
+      font-size: 1.25rem;
+      color: #4a2f2f;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    .hidden {
+      display: none;
+    }
+    #search {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>The Grimoire</h1>
+  <input type="text" id="search" placeholder="Search spells...">
+  <div id="grimoire-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>
