@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grimoire Admin Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+  <script src="admin.js"></script>
+  <style>
+    body {
+      font-family: 'Caveat', cursive;
+      background: #f7f3e9;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    label, input, select, textarea, button {
+      display: block;
+      width: 100%;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    input, select, textarea {
+      padding: 0.5rem;
+    }
+    button {
+      background-color: #4a2f2f;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      cursor: pointer;
+      font-family: 'Caveat', cursive;
+    }
+    #message {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Grimoire Admin Panel</h1>
+  <label for="token">GitHub Token:</label>
+  <input type="password" id="token" placeholder="ghp_... (saved locally)">
+  <button onclick="saveToken()">Save Token</button>
+  <hr>
+  <label for="name">Command Name:</label>
+  <input type="text" id="name" placeholder="e.g. compdoc(flame tongue)">
+  <label for="description">Description:</label>
+  <textarea id="description" rows="3" placeholder="Describe the spell..."></textarea>
+  <label for="category">Category:</label>
+  <select id="category">
+    <option>Emotional Rawness & Truth</option>
+    <option>Symbolism & Ritual</option>
+    <option>Surrealism & Mythmaking</option>
+    <option>Theory & Structure</option>
+    <option>Erotic AI & Chem Systems (/h_word)</option>
+    <option>Content Systems (/contenttm)</option>
+    <option>Workflow & Strategy (/ops)</option>
+  </select>
+  <button onclick="addSpell()">Add Spell</button>
+  <div id="message"></div>
+</body>
+</html>
