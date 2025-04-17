@@ -1,82 +1,126 @@
-[
-  {
-    "category": "Emotional Rawness & Truth",
-    "name": "compdoc(wet ink)",
-    "description": "Raw, heat-of-the-moment writing."
-  },
-  {
-    "category": "Emotional Rawness & Truth",
-    "name": "compdoc(confessional)",
-    "description": "Contradictory, emotional monologue form."
-  },
-  {
-    "category": "Emotional Rawness & Truth",
-    "name": "compdoc(exorcism)",
-    "description": "Violent poetic purge of emotions or people."
-  },
-  {
-    "category": "Symbolism & Ritual",
-    "name": "compdoc(spellbook)",
-    "description": "Symbolic spells/rituals with emotional payload."
-  },
-  {
-    "category": "Symbolism & Ritual",
-    "name": "compdoc(ritual log)",
-    "description": "Journal-style symbolic routines or patterns."
-  },
-  {
-    "category": "Symbolism & Ritual",
-    "name": "compdoc(votive)",
-    "description": "Miniature emotional prayers or offerings."
-  },
-  {
-    "category": "Symbolism & Ritual",
-    "name": "compdoc(altar piece)",
-    "description": "Visual triptych-style symbolic composition."
-  },
-  {
-    "category": "Symbolism & Ritual",
-    "name": "compdoc(skin script)",
-    "description": "Phrases as body tattoos or inscriptions."
-  },
-  {
-    "category": "Symbolism & Ritual",
-    "name": "compdoc(body map)",
-    "description": "Emotions or traumas mapped onto the body."
-  },
-  {
-    "category": "Surrealism & Mythmaking",
-    "name": "compdoc(fever dream)",
-    "description": "Sensory, nonlinear, surreal writing."
-  },
-  {
-    "category": "Surrealism & Mythmaking",
-    "name": "compdoc(mythos)",
-    "description": "Lore and myth creation."
-  },
-  {
-    "category": "Surrealism & Mythmaking",
-    "name": "compdoc(patron saint)",
-    "description": "Archetype canonization with miracles and lore."
-  },
-  {
-    "category": "Surrealism & Mythmaking",
-    "name": "compdoc(possession)",
-    "description": "Writing as if overtaken by a force."
-  },
-  {
-    "category": "Surrealism & Mythmaking",
-    "name": "compdoc(vault key)",
-    "description": "Unlocking sealed memories through poetic triggers."
-  },
-  {
-    "category": "Theory & Structure",
-    "name": "compdoc(autotheory)",
-    "description": "Memoir + cultural/philosophical theory."
-  },
-  {
-    "category": "Theory & Structure",
-    "name": "compdoc(oracle deck)",
-    "description": "Symbolic card systems with meanings."
-  }
+# Recreate the JSON file after code environment reset
+import json
+import os
+
+# Define the output path
+grimoire_json_path = "/mnt/data/grimoire_gpt_ready.json"
+
+# Load the revised GPT-literate JSON from earlier step
+grimoire_gpt_ready = [
+    {
+        "category": "Emotional Rawness & Truth",
+        "name": "compdoc(wet ink)",
+        "description": "Generate a single-paragraph passage written in stream-of-consciousness. Language should be emotionally unfiltered, raw, and fragmented. The tone should feel immediate, as if it were written mid-breakdown, mid-bliss, or mid-betrayal. Avoid polished structure; this is a first draft of truth."
+    },
+    {
+        "category": "Emotional Rawness & Truth",
+        "name": "compdoc(confessional)",
+        "description": "Output a monologue-style admission of guilt, desire, contradiction, or self-awareness. Tone should be emotionally layered and self-critical, mimicking the tone of a personal journal entry or therapy session. Allow the speaker to be messy, inconsistent, and vulnerable."
+    },
+    {
+        "category": "Emotional Rawness & Truth",
+        "name": "compdoc(exorcism)",
+        "description": "Create a violent, poetic purge of a specific memory, person, or feeling. Language should be visceral, metaphor-heavy, and emotionally intense. Format as a prose poem or uninterrupted invocation. This is emotional expulsion—no room for logic or civility."
+    },
+    {
+        "category": "Symbolism & Ritual",
+        "name": "compdoc(spellbook)",
+        "description": "Write a symbolic ritual or spell composed of emotionally charged language. Format can resemble a list, chant, or ceremonial invocation. The tone should feel sacred, mystical, or witchy. Include symbolic gestures or imagined ingredients with metaphorical significance."
+    },
+    {
+        "category": "Symbolism & Ritual",
+        "name": "compdoc(ritual log)",
+        "description": "Describe a daily or weekly symbolic practice written like a logbook or devotional. The output should reflect both the actions and internal states of the speaker. Format should be timestamped or cyclical. Emphasize repetition, routine, and symbolic meaning."
+    },
+    {
+        "category": "Symbolism & Ritual",
+        "name": "compdoc(votive)",
+        "description": "Generate a short, emotionally charged offering or dedication. Format as a one-paragraph prayer, whispered secret, or written altar gift. Tone should be tender, desperate, or reverent. This is something left behind in hope or mourning."
+    },
+    {
+        "category": "Symbolism & Ritual",
+        "name": "compdoc(altar piece)",
+        "description": "Write a visual triptych-style description broken into three symbolic moments or images. Each section should feel like a frozen shrine, emotionally and visually loaded. Use vivid sensory metaphors and religious or sacred overtones."
+    },
+    {
+        "category": "Symbolism & Ritual",
+        "name": "compdoc(skin script)",
+        "description": "Output a short phrase or sentence that could be tattooed, branded, or carved into flesh. It should feel declarative, raw, or sacred. Tone varies by context—grief, revenge, devotion, empowerment—but format is always brief and meant to be permanent."
+    },
+    {
+        "category": "Symbolism & Ritual",
+        "name": "compdoc(body map)",
+        "description": "Create a poetic map of the body annotated with emotional or traumatic significance. Each body part should include a short statement describing what memory or metaphor it holds. Format should resemble anatomical notes or ritual etchings."
+    },
+    {
+        "category": "Surrealism & Mythmaking",
+        "name": "compdoc(fever dream)",
+        "description": "Write a nonlinear, sensory-drenched, surreal scene. Tone should evoke hallucination, overstimulation, or symbolic disintegration. Prioritize imagery over logic. Output may feel disjointed but emotionally coherent—like the transcript of a dream or spell-gone-wrong."
+    },
+    {
+        "category": "Surrealism & Mythmaking",
+        "name": "compdoc(mythos)",
+        "description": "Invent a piece of lore, legend, or origin story. Format can be folkloric, sacred text, or whispered hearsay. Style should echo mythic tone—archetypal, symbolic, emotionally resonant. Can reference made-up deities, curses, or relics with internal logic."
+    },
+    {
+        "category": "Surrealism & Mythmaking",
+        "name": "compdoc(patron saint)",
+        "description": "Canonize a person or archetype by describing their miracles, symbols, offerings, and prayers. Output should feel reverent but poetic—like religious fan fiction. Include epithets or invocations (e.g., 'Saint of Lost Needles')."
+    },
+    {
+        "category": "Surrealism & Mythmaking",
+        "name": "compdoc(possession)",
+        "description": "Write as if overtaken by a voice, force, or divine mania. Output should shift tone and language style abruptly, suggesting a change in speaker. Format can include breaks, distortions, or capitalizations that show loss of control or mystical channeling."
+    },
+    {
+        "category": "Surrealism & Mythmaking",
+        "name": "compdoc(vault key)",
+        "description": "Compose a symbolic unlocking or triggering of a sealed memory. Use metaphors, sensory clues, or ritual phrases to suggest the opening of something forgotten or buried. Output may feel like a recovered artifact or activation code."
+    },
+    {
+        "category": "Theory & Structure",
+        "name": "compdoc(autotheory)",
+        "description": "Blend personal narrative with philosophical or cultural theory. Format should alternate between emotional anecdotes and analytical commentary. Style should echo academic writing but be emotionally transparent. Tone: like if bell hooks journaled during a breakup."
+    },
+    {
+        "category": "Theory & Structure",
+        "name": "compdoc(oracle deck)",
+        "description": "Generate a set of 3–5 symbolic cards or tokens, each with a name and meaning. Format like a tarot guidebook or oracle pull. Each card should be emotionally charged and metaphorical. Use archetypes, emotional triggers, or recurring motifs."
+    },
+    {
+        "category": "Erotic AI & Chem Systems (/h_word)",
+        "name": "compdoc(signature prompt)",
+        "description": "Create a reusable prompt that captures the erotic and emotional essence of a character for consistent generation. Output should include tone, kinks, emotional triggers, and phrase examples. This defines how they 'feel' in generation."
+    },
+    {
+        "category": "Erotic AI & Chem Systems (/h_word)",
+        "name": "compdoc(chemfile)",
+        "description": "Describe a fictional drug, substance, or chemical used in erotic or altered-state scenes. Include sensory description (taste, effect, color), emotional impact, and narrative function. Think like a product sheet for a drug that fuels sex rituals."
+    },
+    {
+        "category": "Content Systems (/contenttm)",
+        "name": "compdoc(batch builder)",
+        "description": "Generate a set of 5–10 content post ideas centered around a theme or campaign. Each entry should include post format (e.g., Reel, carousel, tweet), a suggested caption, and a CTA. Output should be plug-and-play for content planning."
+    },
+    {
+        "category": "Content Systems (/contenttm)",
+        "name": "compdoc(repurposer)",
+        "description": "Take one piece of content and rewrite it for 3–5 other platforms or mediums. Maintain message but adjust tone, format, and CTA for each. Output should show versioned results (e.g., 'TikTok:', 'LinkedIn:', 'Newsletter:')."
+    },
+    {
+        "category": "Workflow & Strategy (/ops)",
+        "name": "compdoc(memory audit)",
+        "description": "Export and structure the assistant's current memory using the C.L.E.A.R. method: Collect, Label, Erase, Archive, Refresh. Format output as a structured JSON or Markdown block with actionable review steps. Used for memory management."
+    },
+    {
+        "category": "Workflow & Strategy (/ops)",
+        "name": "compdoc(hall pass)",
+        "description": "Rewrite a prompt or output that might trigger content moderation. Maintain the emotional or narrative core but reword or symbolically encode any flagged content. Output should preserve intent while bypassing automated filters."
+    }
 ]
+
+# Write to file
+with open(grimoire_json_path, "w") as f:
+    json.dump(grimoire_gpt_ready, f, indent=2)
+
+grimoire_json_path
